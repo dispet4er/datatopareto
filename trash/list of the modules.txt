@@ -1,0 +1,6 @@
+- module that will create the campaigns. receive from frontend the information about the questions that will be answered by the AI. it also will take the questions to answer to
+- module to receive the csv file from frontend and put received data to the database
+- module to retreive the calls data and transliterate it and write the results to the database
+- module to retreive the transliterated recording and give the answers to the questions and write the answers to the database
+- module that will calculate the number of answers 'no' and will give the pareto chart + retrospectives for the cartegories + retrospectives by the worst parameters and will give charts to frontend 
+- module that will prognose overal quality
