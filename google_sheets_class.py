@@ -2,8 +2,8 @@ import gspread
 import re
 from oauth2client.service_account import ServiceAccountCredentials
 
-sheet_id = '1pgU2eV8BiMCpdCRwub2yXvQchKDQRYSQ3IYNYVUajYQ'
-worksheet = 'datacallstopareto'
+sheet_id = '1Q'
+worksheet = 'do'
 
 class GoogleSheet:
     def __init__(self, sheet_id, worksheet_name):
@@ -13,7 +13,7 @@ class GoogleSheet:
 
     def get_google_sheets_api(self):
         scope = ['https://www.googleapis.com/auth/spreadsheets']
-        creds = ServiceAccountCredentials.from_json_keyfile_name('openai-infotelligent-5a47db1ca5dd.json', scope)
+        creds = ServiceAccountCredentials.from_json_keyfile_name('d.json', scope)
         return gspread.authorize(creds)
 
     def get_data_cols(self, range_name):
@@ -85,20 +85,3 @@ class GoogleSheet:
                 return data[last_row - 1].row
             last_row -= 1
         return 1
-
-
-# # Example usage
-# sheet_id = '1pgU2eV8BiMCpdCRwub2yXvQchKDQRYSQ3IYNYVUajYQ'
-# worksheet_name = 'datacallstopareto'
-#
-# # Read data from Google Sheet
-# gsheet = GoogleSheet(sheet_id, worksheet_name)
-# range_name = 'A1:C2'
-# data = gsheet.get_data(range_name)
-# print(data)
-#
-# # Write data to Google Sheet
-# start_row = 1
-# start_col = 12
-# data = [['John', 25, 'Male'], ['Jane', 30, 'Female'], ['Bob', 45, 'Male']]
-# gsheet.write_data(start_row, start_col, data)

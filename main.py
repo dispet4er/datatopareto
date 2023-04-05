@@ -2,8 +2,8 @@ from google_sheets_class import GoogleSheet
 from open_ai_class import OpenAI_Analysis
 import time
 
-sheet_id = '1pgU2eV8BiMCpdCRwub2yXvQchKDQRYSQ3IYNYVUajYQ'
-worksheet_name = 'datacallstopareto'
+sheet_id = '1Q'
+worksheet_name = 'do'
 
 def main():
     # Initialize the Google Sheet object

@@ -3,7 +3,7 @@ import time
 
 class OpenAI_Analysis:
     def __init__(self):
-        self.api_key = "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"
+        self.api_key = "PFJ"
         self.model_engine = "text-davinci-002" #Replace with the OpenAI model engine you want to use
 
     def analyze_text(self, text, context, parameters):
